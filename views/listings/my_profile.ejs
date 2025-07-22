@@ -1,0 +1,74 @@
+<% layout('/layouts/boilerplate') %>
+
+<div class="main_profile_sect">
+    <div class="my_profile_img">
+        <img  
+        src="https://images.template.net/wp-content/uploads/2014/11/HD-LANDSCAPE-WALLPAPER-FACEBOOK-COVER.jpg" 
+        alt=""
+        >
+    </div>
+        
+    <div class="description">
+        <img
+        src="https://images.pexels.com/photos/4346325/pexels-photo-4346325.jpeg?cs=srgb&dl=pexels-ioanamtc-4346325.jpg&fm=jpg"
+        alt=""
+        >
+        <div class="my_profile_name">
+            Zenxuary
+        </div>
+    </div>
+</div>
+
+<!-- <div class="main_content_sect_top_line">
+    <hr>
+</div> -->
+
+<div class="main_content_sect">
+    <div class="content_nav">
+        <button class="left_btn active" data-content="description" >
+            <i class="fa-solid fa-book"></i>
+            <span>description</span>
+        </button>
+        <button data-content="showcase">
+            <i class="fa-solid fa-vr-cardboard"></i>
+            <span>Showcase</span>
+        </button>
+        <button data-content="market">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <span>market</span>
+        </button>
+        <button data-content="jobs">
+            <i class="fa-solid fa-user-tie"></i>
+            <span>jobs</span>
+        </button>
+        <button class="right_btn" data-content="contact">
+            <i class="fa-solid fa-phone-volume"></i>
+            <span>contact</span>
+        </button>
+    </div>
+
+    <div class="content" id="profileContent">
+        <%- include('./profile_main/description') %>
+    </div>
+</div>
+
+<script>
+
+const navButtons = document.querySelectorAll('.content_nav button');
+
+navButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+        const section = this.getAttribute('data-content');
+
+        navButtons.forEach(a => a.classList.remove("active"));
+        this.classList.add("active");
+
+        fetch(`/profile_main/${section}`)
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('profileContent').innerHTML = html;
+            });
+    });
+});
+
+</script>

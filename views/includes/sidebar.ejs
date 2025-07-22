@@ -1,0 +1,76 @@
+<div class="row">
+
+  <div class="sidebar">
+    <nav class="sidebar-nav">
+      <form action="/home">
+      <button class="sidebar-btn <%= currentPath === '/home' ? ' active' : '' %>">
+        <i class="fas fa-home"></i>
+        <span class="sidebar-label">Home</span>
+      </button>
+      </form>
+      <form action="/explore">
+      <button class="sidebar-btn <%= currentPath === '/explore' ? ' active' : '' %>">
+        <i class="fa-solid fa-chart-line"></i>
+        <span class="sidebar-label">Explore</span>
+      </button>
+      </form>
+      <form action="/interests">
+      <button class="sidebar-btn <%= currentPath === '/interests' ? ' active' : '' %>">
+        <i class="fa-solid fa-layer-group"></i>
+        <span class="sidebar-label">Interests</span>
+      </button>
+      </form>
+      <form action="/messages">
+      <button class="sidebar-btn <%= currentPath === '/messages' ? ' active' : '' %>">
+        <i class="fa-solid fa-comment-dots"></i>
+        <span class="sidebar-label">Messages</span>
+      </button>
+      </form>
+      <form action="/create">
+      <button class="sidebar-btn <%= currentPath === '/create' ? ' active' : '' %>">
+        <i class="fa-solid fa-circle-plus"></i>
+        <span class="sidebar-label">Create</span>
+      </button>
+      </form>
+      <form action="/you">
+      <button class="sidebar-btn <%= currentPath === '/you' ? ' active' : '' %>">
+        <i class="fas fa-user"></i>
+        <span class="sidebar-label">you</span>
+      </button>
+      </form>
+      <!-- Add more buttons as needed -->
+    </nav>
+    <!-- Sidebar Content (optional) -->
+  </div>
+  
+</div>
+
+<!-- <script>
+// JavaScript to handle active state
+document.querySelectorAll('.sidebar-btn').forEach(button => {
+  button.addEventListener('click', function(event) {
+    // Remove active from all buttons
+    document.querySelectorAll('.sidebar-btn').forEach(btn => btn.classList.remove('active'));
+    // Add active to the clicked button
+    this.classList.add('active');
+    // Submit the form (navigate)
+    this.closest('form').submit();
+ // 100ms delay
+  });
+});
+</script> -->
+
+<!-- <script>
+let currentActiveBtn = null;
+
+document.querySelectorAll('.sidebar-btn').forEach(button => {
+  button.addEventListener('click', function() {
+    if (currentActiveBtn) {
+      currentActiveBtn.classList.remove('active');
+    }
+    this.classList.add('active');
+    currentActiveBtn = this;
+    this.closest('form').submit();
+  });
+});
+</script> -->

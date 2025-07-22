@@ -1,0 +1,36 @@
+.home-grid {
+      column-width: 200px;       /* each “column” is at least 250px */
+      /* column-gap: 16px;          space between columns */
+      max-width: 1200px;         /* optional max-width for the whole grid */
+      /* margin: 20px auto;         center it in the page */
+      margin: 10px;
+    }
+
+    /* 2. Items: prevent them from breaking across columns */
+.home-grid > .grid-item {
+      break-inside: avoid;       /* do not split this box between columns */
+      /* margin-bottom: 16px;       vertical gap between items */
+      border-radius: 8px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    /* 3. Make images fill their container’s width, auto‑height */
+    .home-grid > .grid-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* 4. (Optional) Responsively reduce columns on smaller screens */
+    @media (max-width: 950px) {
+      .home-grid { column-width: 160px; }
+    }
+
+    @media (max-width: 600px) {
+      .home-grid { column-width: 150px; }
+    }
+
+    @media (max-width: 480px) {
+      .home-grid { column-width: 120px; }
+    }

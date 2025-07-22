@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <!-- Left side: Brand -->
+    <a class="brand" href="/">Zenxuary</a>
+
+    <div class="nav-right">
+    <!-- Right side: Search and Toggle -->
+    <div class="nav-input d-flex align-items-center desktop-class">
+
+      <div class="search-container">
+        <!-- <button class="search-icon-btn" onclick="toggleSearch()">
+          <i class="fas fa-search"></i>
+        </button> -->
+        <form class="search-form" role="search">
+          <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search"/>
+          <!-- <button class="btn btn-outline-success search-submit" type="submit">Search</button> -->
+        </form>
+      </div>
+
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+    </div>
+
+    <button class="search-icon-btn" onclick="toggleSearch()">
+      <i class="fas fa-search"></i>
+    </button>
+
+      <!-- Center: Navigation Links -->
+      <div class="nav-opt d-none d-lg-block">
+        <ul class="navbar-nav">
+          <form action="/notification">
+            <li class="nav-item">
+              <button class="nav-btn">
+                <i class="fa-solid fa-bell"></i>
+              </button>
+            </li>
+          </form>
+          <form action="/profile">
+            <li class="nav-item">
+              <button class="nav-btn">
+                <i class="fa-solid fa-user"></i>
+              </button>
+            </li>
+          </form>
+          <form action="/settings">
+            <li class="nav-item">
+              <button class="nav-btn">
+                <i class="fa-solid fa-gear"></i>
+              </button>
+            </li>
+          </form>
+        </ul>
+      </div>
+
+  </div>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="collapse navbar-collapse mobile-menu" id="navbarTogglerDemo02">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button class="nav-btn" aria-current="page">Home</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-btn">Link</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- <script>
+function toggleSearch() {
+  const searchForm = document.querySelector('.search-form');
+  const searchIconBtn = document.querySelector('.search-icon-btn');
+
+  searchForm.classList.toggle('active');
+  searchIconBtn.classList.toggle('active');
+
+  if (searchForm.classList.contains('nav-active')) {
+    searchForm.querySelector('input').focus();
+  }
+}
+
+document.addEventListener('click', function(event) {
+  const searchForm = document.querySelector('.search-form');
+  const searchIconBtn = document.querySelector('.search-icon-btn');
+  if (!searchForm) return;
+  if (
+    searchForm.classList.contains('active') &&
+    !searchForm.contains(event.target) &&
+    !searchIconBtn.contains(event.target)
+  ) {
+    searchForm.classList.remove('active');
+    searchIconBtn.classList.remove('active');
+  }
+});
+</script> -->
+
+<!-- <script>
+
+  const element = document.querySelector('.nav-input');
+        if (window.innerWidth < 480) {
+          element.classList.add('mobile-class');
+          element.classList.remove('desktop-class');
+        } else {
+          element.classList.remove('mobile-class');
+          element.classList.add('desktop-class');
+        }
+
+</script> -->

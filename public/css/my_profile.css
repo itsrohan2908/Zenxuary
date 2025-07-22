@@ -1,0 +1,153 @@
+.main_profile_sect{
+    height: 290px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+}
+
+.my_profile_img{
+    height: 200px;
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.my_profile_img img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+
+.description{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    /* left: 5%; */
+}
+
+.description img{
+    position: relative;
+    top: -70px;
+    left: 5%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    border: 5px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.description .my_profile_name{
+    position: relative;
+    left: 7%;
+    top: 20px;
+    font-size: 2rem;
+}
+
+.main_content_sect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100%; */
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* .main_content_sect_top_line{
+    width: 100%;
+    margin-top: 30px;
+    justify-content: center;
+} */
+
+.main_content_sect_top_line hr{
+    width: 80%;
+    border-top: 1px;
+    color: grey;
+    opacity: 25%;
+}
+
+.content_nav{
+    /* width: 80%; */
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.content div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .main_profile_sect{
+        width: 100%;
+        height: 210px;
+    }
+
+    .main_content_sect{
+        width: 100%;
+    }
+
+    .my_profile_img{
+        height: 150px;
+    }
+
+    .my_profile_img img{
+        height: 150px;
+    }
+
+    .description img{
+        top: -50px;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .main_profile_sect{
+        width: 100%;
+        height: 160px;
+    }
+
+    .main_content_sect{
+        width: 100%;
+    }
+
+    .my_profile_img{
+        height: 100px;
+    }
+
+    .my_profile_img img{
+        height: 100px;
+    }
+
+    .description img{
+        top: -50px;
+        width: 100px;
+        height: 100px;
+    }
+}
