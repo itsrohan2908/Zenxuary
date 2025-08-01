@@ -1,4 +1,12 @@
 {
+  "name": "zenxuary",
+  "version": "1.0.0",
+  "description": "A creative community platform built with Node.js and Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
   "dependencies": {
     "ejs": "^3.1.10",
     "ejs-mate": "^4.0.0",
@@ -6,5 +14,8 @@
     "method-override": "^3.0.0",
     "mongoose": "^8.15.2"
   },
-  "type": "module"
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }

@@ -14,7 +14,8 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(process.cwd(), 'public')));
 
 async function main() {
-    await mongoose.connect('mongodb://localhost:27017/zenxuary');
+    const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/zenxuary';
+    await mongoose.connect(mongoURI);
     console.log('Connected to MongoDB');
 }
 main()
@@ -26,6 +27,11 @@ app.set('views', path.join(process.cwd(), 'views'));
 
 await Listing1.insertMany(pubData.data);
 console.log("Seeded pub_Listing from pub_data.js!");
+
+app.get('/', async (req, res) => {
+    // Redirect root to home page
+    res.redirect('/home');
+});
 
 app.get('/home', async (req, res) => {
     // Fetch one document from pub_Listing
@@ -76,6 +82,7 @@ app.get('/profile_main/:section', (req, res) => {
     res.render(`listings/profile_main/${section}`, { layout: false });
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
